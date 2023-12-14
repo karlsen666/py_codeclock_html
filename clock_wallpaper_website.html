@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Python-Style Clock</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: monospace;
+      background-color: #272727;
+      color: #cccccc;
+    }
+
+    pre {
+      background-color: #272727;
+      padding: 1em;
+      border-radius: 5px;
+      color: #cccccc;
+      font-size: 7.1em;
+    }
+
+    .python-code {
+      /*border: 1px solid #cccccc;
+      margin-top: 0.8em;
+      margin-bottom: 0.8em;*/
+      padding-left: 5%;
+      height: 95%;
+    }
+
+    .python-code .def {
+      color: #66d9ef;
+    }
+
+    .python-code .keyword {
+      color: #c69b6d;
+    }
+
+    .python-code .variable {
+      color: #e69f00;
+    }
+
+    .python-code .value {
+      color: #9b703f;
+    }
+
+    .python-code .variableName {
+      color: green;
+    }
+
+   .python-code .className {
+      color: #aa11aa;
+    } 
+  </style>
+</head>
+<body>
+  <pre class="python-code">
+<span class="def">def</span> <span class="className">python_clock </span><span class="keyword">{</span>
+    <span class="variableName">time_hour: </span><span class="variable"><span id="currentHour"></span></span>
+    <span class="variableName">time_minute: </span><span class="variable"><span id="currentMinute"></span></span>
+    <span class="variableName">time_second: </span><span class="variable"><span id="currentSecond"></span></span>
+    <span class="variableName">time_day: </span><span class="variable"><span id="currentDay"></span></span>
+    <span class="variableName">time_month: </span><span class="variable"><span id="currentMonth"></span></span>
+    <span class="variableName">time_year: </span><span class="variable"><span id="currentYear"></span></span>
+  <span class="keyword">}</span>
+  </pre>
+
+  <script>
+updateClock();
+
+function updateClock() {
+  let currentHour = new Date().getHours();
+  let currentMinute = new Date().getMinutes();
+  let currentSecond = new Date().getSeconds();
+  let currentDay = new Date().getDate();
+  let currentMonth = new Date().getMonth() + 1; // Months are zero-indexed, so add 1
+  let currentYear = new Date().getFullYear();
+
+  document.getElementById('currentHour').textContent = currentHour;
+  document.getElementById('currentMinute').textContent = currentMinute;
+  document.getElementById('currentSecond').textContent = currentSecond;
+  document.getElementById('currentDay').textContent = currentDay;
+  document.getElementById('currentMonth').textContent = currentMonth;
+  document.getElementById('currentYear').textContent = currentYear;
+
+  setTimeout(updateClock, 1000); // Update the clock every second
+}
+  </script>
+  
