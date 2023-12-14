@@ -10,7 +10,7 @@
       align-items: center;
       justify-content: center;
       font-family: monospace;
-      background-color: #272727;
+      background-color: #646464; /*#272727;*/
       color: #cccccc;
     }
 
@@ -38,8 +38,11 @@
       color: #c69b6d;
     }
 
-    .python-code .variable {
-      color: #e69f00;
+    .python-code .variable_time {
+      color: #4B8BBE;
+    }
+    .python-code .variable_date {
+      color: #FFD43B;
     }
 
     .python-code .value {
@@ -58,12 +61,12 @@
 <body>
   <pre class="python-code">
 <span class="def">def</span> <span class="className">python_clock </span><span class="keyword">{</span>
-    <span class="variableName">time_hour: </span><span class="variable"><span id="currentHour"></span></span>
-    <span class="variableName">time_minute: </span><span class="variable"><span id="currentMinute"></span></span>
-    <span class="variableName">time_second: </span><span class="variable"><span id="currentSecond"></span></span>
-    <span class="variableName">time_day: </span><span class="variable"><span id="currentDay"></span></span>
-    <span class="variableName">time_month: </span><span class="variable"><span id="currentMonth"></span></span>
-    <span class="variableName">time_year: </span><span class="variable"><span id="currentYear"></span></span>
+    <span class="variableName">time_hour: </span><span class="variable_time"><span id="currentHour"></span></span>
+    <span class="variableName">time_minute: </span><span class="variable_time"><span id="currentMinute"></span></span>
+    <span class="variableName">time_second: </span><span class="variable_time"><span id="currentSecond"></span></span>
+    <span class="variableName">time_day: </span><span class="variable_date"><span id="currentDay"></span></span>
+    <span class="variableName">time_month: </span><span class="variable_date"><span id="currentMonth"></span></span>
+    <span class="variableName">time_year: </span><span class="variable_date"><span id="currentYear"></span></span>
   <span class="keyword">}</span>
   </pre>
 
